@@ -3,11 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>AngularCustomElements</title>
+  <script src="./custom-button-element.js"></script>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+  <app-button label="Submit" ></app-button>
+    <script>
+      const button = document.querySelector('app-button');
+      button.addEventListener('action', (event) => {
+        console.log(`Action created: ${event.detail}`);
+      });
+    
+    </script>
 </body>
 </html>
